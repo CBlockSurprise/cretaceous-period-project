@@ -3,5 +3,10 @@ var useCookies = false;
 
 function doCookies(b) {
   useCookies = b;
-  document.querySelector("#cookieAlert").innerHTML = "";
+  removeElement("cookieAlert");
+}
+
+function removeElement(elementId) {
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
 }
