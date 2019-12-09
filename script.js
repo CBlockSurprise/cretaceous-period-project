@@ -2,6 +2,6 @@
 var useCookies = false;
 
 function doCookies(b) {
-  useCookies = true;
-  
+  useCookies = b;
+  document.querySelector("#cookieAlert").innerHTML = "";
 }
