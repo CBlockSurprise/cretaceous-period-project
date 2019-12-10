@@ -19,7 +19,7 @@ function setup() {
         showMessage = false;
         useCookies = true;
       } else if (doAllowCookies == "false") {
-        showMessage = false;
+        useCookies = false;
       }
     }
   }
