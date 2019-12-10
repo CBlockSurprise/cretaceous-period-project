@@ -70,7 +70,7 @@ let shownMovieTitle = false;
 let charOfMT = ["C","R","E","T","A","C","É","M","O","N"];
 let aoMT = "";
 
-$(document).on(‘resize scroll’, function() {
+$(window).scroll(function() {
   if ($("#movieTitle").isInViewport() && !shownMovieTitle) {
     setTimeout(function() {
       shownMovieTitle = true;
