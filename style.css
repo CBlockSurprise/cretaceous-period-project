@@ -5,11 +5,12 @@
 }
 
 .cbscrd {
+  color: rgb(220,220,220);
+  
+}
+.cbscrd :onhover {
   
   color: white;
-}
-.cbscrd a:onhover {
-  color: rgb(220,220,220);
 }
 
 .noselect {
