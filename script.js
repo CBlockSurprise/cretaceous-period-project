@@ -3,7 +3,6 @@ var useCookies = false;
 
 function doCookies(b) {
   useCookies = b;
-  removeElement("cookieAlert");
 }
 
 function removeElement(elementId) {
