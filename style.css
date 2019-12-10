@@ -8,7 +8,7 @@
   color: rgb(220,220,220);
   
 }
-.cbscrd :onhover {
+.cbscrd:hover {
   
   color: white;
 }
