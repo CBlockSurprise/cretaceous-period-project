@@ -3,3 +3,10 @@
   background-image: url("plants.png");
   width: 100%;
 }
+
+.cbscrd {
+  color: rgb(220,220,220);
+}
+.cbscrd a:onhover {
+  color: white;
+}
