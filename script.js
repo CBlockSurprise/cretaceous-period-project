@@ -70,4 +70,5 @@ function deleteAllCookies() {
             d.shift();
         }
     }
+  console.log("Cookies are now set to: " + document.cookie)
 }
