@@ -56,6 +56,36 @@ function getCookie(cname) {
   return "";
 }
 
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+  
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+let shownMovieTitle = false;
+let charOfMT = ["C","R","E","T","A","C","É","M","O","N"];
+let aoMT = "";
+
+$(window).on(‘resize scroll’, function() {
+  if ($("#movieTitle").isInViewport() && !shownMovieTitle) {
+    setTimeout(function() {
+      shownMovieTitle = true;
+      for (let i = 0; i < charOfMT.length; i++) {
+        aoMT = chatOfMT[i];
+        setTimeout(function() {
+          $("#movieTitle").text += aoMT;
+        }, i*50);
+        
+      }
+      
+    }, 750)
+  }
+});
+
 // function deleteAllCookies() {
 //   var cookies = document.cookie.split(";");
 //   document.cookie = "expires=Thu, 01 Jan 1970 00:00:00 GMT;";
