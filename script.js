@@ -4,16 +4,16 @@ var useCookies = false;
 function doCookies(b) {
   useCookies = b;
   if (useCookies) {
-    setCookie("allowCookies","true",31)
+    setCookie("allowcookies","true",31)
   } else {
-    setCookie("allowCookies","true",5)
+    setCookie("allowcookies","true",5)
   }
 }
 
 function setup() {
   let showMessage = true;
   if (document.cookie.length > 1) {
-    let doAllowCookies = getCookie("allowCookies");
+    let doAllowCookies = getCookie("allowcookies");
     if (doAllowCookies != "") {
       if (doAllowCookies == "true") {
         showMessage = false;
