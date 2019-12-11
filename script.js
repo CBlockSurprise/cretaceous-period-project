@@ -8,7 +8,6 @@ function doCookies(b) {
   } else {
     setCookie("allowcookies","true",5)
   }
-  $("#movieTitle").text = "";
 }
 
 function setup() {
