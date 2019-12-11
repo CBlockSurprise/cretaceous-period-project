@@ -69,7 +69,7 @@ function isInViewport(element) {
 
 let shownMovieTitle = false;
 let charOfMT = ["C","R","E","T","A","C","É","M","O","N"];
-let aoMT = "";
+let tsfmt = 0;
 
 $(window).scroll(function() {
   if (isInViewport("#movieTitle") && !shownMovieTitle) {
@@ -78,10 +78,10 @@ $(window).scroll(function() {
       
       console.log("Showing Movie Title...")
       for (let i = 0; i < charOfMT.length; i++) {
-        aoMT = charOfMT[i];
         setTimeout(function() {
-          console.log("Showing " + aoMT + " on movie title.");
-          $("#movieTitle").text += aoMT;
+          console.log("Showing " + charOfMT[tsfmt] + " on movie title.");
+          document.querySelector("#movieTitle").textContent += charOfMT[tsfmt];
+          tsfmt++;
         }, i*50);
         
       }
