@@ -77,7 +77,7 @@ $(window).scroll(function() {
     setTimeout(function() {
       shownMovieTitle = true;
       for (let i = 0; i < charOfMT.length; i++) {
-        aoMT = chatOfMT[i];
+        aoMT = charOfMT[i];
         setTimeout(function() {
           $("#movieTitle").text += aoMT;
         }, i*50);
