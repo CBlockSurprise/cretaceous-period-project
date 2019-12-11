@@ -74,8 +74,9 @@ let aoMT = "";
 
 $(window).scroll(function() {
   if (isInViewport("#movieTitle") && !shownMovieTitle) {
+    shownMovieTitle = true;
     setTimeout(function() {
-      shownMovieTitle = true;
+      
       console.log("Showing Movie Title...")
       for (let i = 0; i < charOfMT.length; i++) {
         aoMT = charOfMT[i];
@@ -85,7 +86,7 @@ $(window).scroll(function() {
         
       }
       
-    }, 750)
+    }, 750);
   }
 });
 
