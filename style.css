@@ -21,3 +21,10 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Current */
 }
+
+.reviewQuote {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; 
+  font-style: normal; 
+  font-variant: normal;
+  font-weight: 700;
+}
