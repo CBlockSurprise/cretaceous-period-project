@@ -80,6 +80,7 @@ $(window).scroll(function() {
       for (let i = 0; i < charOfMT.length; i++) {
         aoMT = charOfMT[i];
         setTimeout(function() {
+          console.log("Showing " + aoMT + " on movie title.");
           $("#movieTitle").text += aoMT;
         }, i*50);
         
