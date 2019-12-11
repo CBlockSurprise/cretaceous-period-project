@@ -79,6 +79,9 @@ $(window).scroll(function() {
       console.log("Showing Movie Title...")
       for (let i = 0; i < charOfMT.length; i++) {
         setTimeout(function() {
+          if (tsfmt == 0) {
+            document.querySelector("#movieTitle").innerHTML = "";
+          }
           console.log("Showing " + charOfMT[tsfmt] + " on movie title.");
           document.querySelector("#movieTitle").textContent += charOfMT[tsfmt];
           tsfmt++;
