@@ -56,6 +56,8 @@ function getCookie(cname) {
   return "";
 }
 
+console.log($("#movieTitle").text);
+
 function isInViewport(element) {
   var elementTop = $(element).offset().top;
   var elementBottom = elementTop + $(element).outerHeight();
