@@ -76,6 +76,7 @@ $(window).scroll(function() {
   if (isInViewport("#movieTitle") && !shownMovieTitle) {
     setTimeout(function() {
       shownMovieTitle = true;
+      console.log("Showing Movie Title...")
       for (let i = 0; i < charOfMT.length; i++) {
         aoMT = charOfMT[i];
         setTimeout(function() {
