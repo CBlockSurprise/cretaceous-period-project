@@ -56,9 +56,9 @@ function getCookie(cname) {
   return "";
 }
 
-$.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
-  var elementBottom = elementTop + $(this).outerHeight();
+function isInViewport(element) {
+  var elementTop = $(element).offset().top;
+  var elementBottom = elementTop + $(element).outerHeight();
   
   var viewportTop = $(window).scrollTop();
   var viewportBottom = viewportTop + $(window).height();
@@ -71,7 +71,7 @@ let charOfMT = ["C","R","E","T","A","C","É","M","O","N"];
 let aoMT = "";
 
 $(window).scroll(function() {
-  if ($("#movieTitle").isInViewport() && !shownMovieTitle) {
+  if (isInViewport("#movieTitle") && !shownMovieTitle) {
     setTimeout(function() {
       shownMovieTitle = true;
       for (let i = 0; i < charOfMT.length; i++) {
