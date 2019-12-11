@@ -28,3 +28,9 @@
   font-variant: normal;
   font-weight: 700;
 }
+
+.stillImage {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
