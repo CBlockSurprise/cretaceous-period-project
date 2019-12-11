@@ -8,6 +8,7 @@ function doCookies(b) {
   } else {
     setCookie("allowcookies","true",5)
   }
+  $("#movieTitle").text = "";
 }
 
 function setup() {
@@ -56,7 +57,6 @@ function getCookie(cname) {
   return "";
 }
 
-console.log($("#movieTitle").text);
 
 function isInViewport(element) {
   var elementTop = $(element).offset().top;
