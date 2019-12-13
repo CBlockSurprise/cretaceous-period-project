@@ -4,6 +4,11 @@
   width: 100%;
 }
 
+.trailerMovie {
+  background-image: url("trailericon.png");
+  width: 100%;
+}
+
 .cbscrd {
   color: rgb(33,33,33);
   
