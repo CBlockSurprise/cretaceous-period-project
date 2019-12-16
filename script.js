@@ -68,7 +68,7 @@ function isInViewport(element) {
 };
 
 let shownMovieTitle = false;
-let charOfMT = ["C","R","E","T","A","C","É","M","O","N"];
+let charOfMT = ["T","h","e"," ","T","h","r","e","e"," ","I","d","i","o","t","s"];
 let tsfmt = 0;
 
 $(window).scroll(function() {
