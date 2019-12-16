@@ -71,7 +71,7 @@
     <br/>
     <br/>
     <br/>
-    <center>
+    <center id="vid">
       <iframe width="840px" height="630px"
       src="https://www.youtube.com/embed/kGOQfLFzJj8">
       </iframe>
@@ -143,6 +143,23 @@
           }
         }
         return "";
+      }
+      
+      function videoSrc() {
+        let code1 = '<iframe width="840px" height="630px" src="https://www.youtube.com/embed/';
+        let code2 = '"></iframe>';
+        let id = "";
+        let random = Math.floor(Math.random() * 100);
+        if (random < 33) {
+          id = "kGOQfLFzJj8";
+        } else if (random >= 33 && random <= 66) {
+          id = "FveF-we6lcE";
+        } else if (random > 66 && random < 98) {
+          id = "2ZIpFytCSVc";
+        } else {
+          id = "ErQHVUQ6QCk";
+        }
+        
       }
     </script>
   </body>
