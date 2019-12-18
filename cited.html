@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>The 3 Idiots - Cited Works</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  </head>
+  <body style="background-color: rgb(32, 32, 32);">
+    <nav class="navbar navbar-inverse" style="position: fixed; width: 100%; z-index: 999;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/cretaceous-period-project/#">The 3 Idiots</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/cretaceous-period-project/#">Home</a></li>
+          <li><a href="/cretaceous-period-project/about">About</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">History
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/cretaceous-period-project/plantlife">Plant Life</a></li>
+              <li><a href="/cretaceous-period-project/majorevents">Major Characteristics and Events</a></li>
+              <li><a href="/cretaceous-period-project/animallife">Animal Life</a></li>
+            </ul>
+          </li>
+          <li><a href="/cretaceous-period-project/trailer">Movie Trailer</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <center>
+      <div class="alert alert-warning alert-dismissible fade in" style="width: 40%;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Warning!</strong> This website is still under development. There may be some features missing, or things that won't work.
+      </div>
+    </center>
+    <div id="cookieAlert" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Cookies</h4>
+          </div>
+          <div class="modal-body">
+            <p>By clicking, "I agree," you agree to cookies. This is to help preformance with the site, and for loading previous content that has been saved. By clicking on the X above, you disagree to cookies, and cookies will not be loaded. (Execpt for cookies that tell us that you don't want them)</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="javascript:doCookies(true)">I agree</button>
+          </div>
+        </div>
 
+      </div>
+    </div>
+    <!--Content-->
+    <!--End Content-->
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <hr></hr>
+    <br/>
+    <br/>
+    <!--Footer-->
+    <footer class="credits container-fluid">
+      <center>
+        <div class="credit-list">
+            <a style="color:rgb(245,245,245);" href="#">This site uses:</a>
+            <a href="https://jquery.com/" target="_blank">jQuery</a><a href="#" style="color:rgb(245,245,245);">,</a>
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a><a href="#" style="color:rgb(245,245,245);">, and</a>
+            <a href="https://p5js.org/" target="_blank">p5.js</a>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <a href="/cretaceous-period-project/cited" style="color:gray;">Cited Work</a>
+        <div class="noselect" style="font-size: 20px;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="cbscrd">M</a><a class="cbscrd">a</a><a class="cbscrd">d</a><a class="cbscrd">e</a>&nbsp;<a class="cbscrd">b</a><a class="cbscrd">y</a>&nbsp;<a class="cbscrd">C</a><a class="cbscrd">B</a><a class="cbscrd">l</a><a class="cbscrd">o</a><a class="cbscrd">c</a><a class="cbscrd">k</a><a class="cbscrd">S</a><a class="cbscrd">u</a><a class="cbscrd">r</a><a class="cbscrd">p</a><a class="cbscrd">r</a><a class="cbscrd">i</a><a class="cbscrd">s</a><a class="cbscrd">e</a>
+        </div>
+      </center>
+    </footer>
+    
+    <script>
+      var useCookies = false;
+      function doCookies(b) {
+        useCookies = b;
+        if (useCookies) {
+          setCookie("allowcookies","true",31)
+        } else {
+          setCookie("allowcookies","true",5)
+        }
+      }
+      function setup() {
+        let showMessage = true;
+        if (document.cookie.length > 1) {
+          let doAllowCookies = getCookie("allowcookies");
+          if (doAllowCookies != "") {
+            if (doAllowCookies == "true") {
+              showMessage = false;
+              useCookies = true;
+            } else if (doAllowCookies == "false") {
+              useCookies = false;
+            }
+          }
+        }
+        if (showMessage) {
+          $("#cookieAlert").modal('show');
+        }
+      }
+      function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+    </script>
+  </body>
+</html>
